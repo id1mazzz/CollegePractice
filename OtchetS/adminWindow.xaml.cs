@@ -23,10 +23,14 @@ namespace OtchetS
         {
             InitializeComponent();
             passportPage.Visibility = Visibility.Hidden;
+            kabinetsPage.Visibility = Visibility.Hidden;
             using (var db = new Entitiess())
             {
                 var octhetOne = db.Computers.ToList();
                 PDFcomputers.ItemsSource = octhetOne;
+
+                var octhetTwo= db.Computers.ToList();
+                PDFkabinets.ItemsSource = octhetTwo;
 
                 var v = db.Otchets.Select(ss => ss.Type).ToList();
                 PDFcomputers.ItemsSource = v.ToList();
@@ -41,10 +45,10 @@ namespace OtchetS
                 switch (vidOtcheta.SelectedIndex)
                 {
                     case 0:
-                        passportPage.Visibility = Visibility.Visible; var prep = db.Computers.ToList(); PDFcomputers.ItemsSource = prep;  //Выгрузка данных из таблицы в combobox.
+                        passportPage.Visibility = Visibility.Visible; kabinetsPage.Visibility = Visibility.Collapsed; var prep = db.Computers.ToList(); PDFcomputers.ItemsSource = prep;  //Выгрузка данных из таблицы в combobox.
                         break;
                     case 1:
-                        passportPage.Visibility = Visibility.Collapsed;
+                        passportPage.Visibility = Visibility.Collapsed; kabinetsPage.Visibility = Visibility.Visible; var p = db.Computers.ToList(); PDFcomputers.ItemsSource = p; 
                         break;
 
                 }
@@ -82,6 +86,10 @@ namespace OtchetS
             }
         }
 
-        
+        private void pdfKabBut_Click(object sender, RoutedEventArgs e)
+        {
+            documentTwo documentTwo = new documentTwo();
+            documentTwo.Show();
+        }
     }
 }

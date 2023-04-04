@@ -87,6 +87,9 @@
     <Compile Include="document.xaml.cs">
       <DependentUpon>document.xaml</DependentUpon>
     </Compile>
+    <Compile Include="documentTwo.xaml.cs">
+      <DependentUpon>documentTwo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Kabinets.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="document.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="documentTwo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

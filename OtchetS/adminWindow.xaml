@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="adminWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ComboBox x:Name="vidOtcheta" Margin="10,23,632,360" RenderTransformOrigin="0.5,0.5" DropDownClosed="vidOtcheta_DropDownClosed">
+        <ComboBox x:Name="vidOtcheta" Margin="10,23,541,360" RenderTransformOrigin="0.5,0.5" DropDownClosed="vidOtcheta_DropDownClosed">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1"/>
@@ -17,16 +17,16 @@
                 </TransformGroup>
             </ComboBox.RenderTransform>
             <ComboBoxItem Content="Паспорт компьютера"/>
-            <ComboBoxItem Content="blood"/>
+            <ComboBoxItem Content="Распределение по кабинетам"/>
 
         </ComboBox>
-        <Grid x:Name="passportPage">
+        <Grid Visibility="Collapsed" x:Name="passportPage" Margin="0,79,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="11*"/>
                 <RowDefinition Height="687*"/>
             </Grid.RowDefinitions>
-            <DataGrid x:Name="PDFcomputers"  Margin="10,90,10,90" AutoGenerateColumns="False" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
-                
+            <DataGrid x:Name="PDFcomputers"  Margin="10,10,10,97" AutoGenerateColumns="False" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+
                 <DataGrid.Columns>
                     <DataGridTextColumn IsReadOnly="True" Header="Инвентаризационный Номер" Width="220" Binding="{Binding InventNomer}"/>
                     <DataGridTextColumn IsReadOnly="True" Header="Наименование" Width="130" Binding="{Binding Name}" />
@@ -43,8 +43,54 @@
                             Foreground="Black"
                             FontSize="18"
                             FontFamily="Times New Roman"
-                            Cursor="Hand" Margin="10,342,660,28"  RenderTransformOrigin="0.5,0.5" Click="bt_Print_Click" Grid.Row="1" Background="{x:Null}" BorderBrush="#FF020000" />
-            
+                            Cursor="Hand" Margin="10,285,660,10"  RenderTransformOrigin="0.5,0.5" Click="bt_Print_Click" Grid.Row="1" Background="{x:Null}" BorderBrush="#FF020000" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
+        </Grid>
+        
+        
+        <Grid Visibility="Visible" x:Name="kabinetsPage" Margin="0,79,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="687*"/>
+            </Grid.RowDefinitions>
+            <DataGrid x:Name="PDFkabinets"  Margin="10,10,10,97" AutoGenerateColumns="False" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Header="Кабинет" Width="*" Binding="{Binding Kabinet}"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="Инвентаризационный Номер" Width="*" Binding="{Binding InventNomer}"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="Наименование" Width="*" Binding="{Binding Name}" />
+                    
+                    
+
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+            <Button x:Name="pdfKabBut" BorderThickness="1"
+                            Content="PDF"
+                            Foreground="Black"
+                            FontSize="18"
+                            FontFamily="Times New Roman"
+                            Cursor="Hand" Margin="10,285,660,10"  RenderTransformOrigin="0.5,0.5" Click="pdfKabBut_Click" Grid.Row="1" Background="{x:Null}" BorderBrush="#FF020000" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
         </Grid>
     </Grid>
 </Window>

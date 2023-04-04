@@ -1,0 +1,78 @@
+﻿<Window x:Class="OtchetS.documentTwo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OtchetS"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="document" Height="680" Width="600" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="btnClose"                          
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Click="btnClose_Click" Margin="566,3,0,651" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Red"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Печать" Name="pechat" Click="pechat_Click" HorizontalAlignment="Left" Margin="529,639,0,0" VerticalAlignment="Top" Height="31" Width="61" FontWeight="Bold"/>
+        <Grid x:Name="print">
+            <Label Content="ОТЧЕТ" HorizontalAlignment="Center" Margin="0,78,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="name" Content="Распределение компьютеров по кабинетам" HorizontalAlignment="Center" Margin="0,105,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="16"/>
+            <Label Content="Дата:" HorizontalAlignment="Left" Margin="10,569,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="16"/>
+            <Label x:Name="data" Content="" HorizontalAlignment="Left" Margin="57,569,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="16" FontStyle="Normal"/>
+            <StackPanel Height="1" Background="Black" Margin="60,598,457,80"/>
+            <StackPanel Height="1" Background="Black" Margin="389,599,136,80"/>
+            <Label Content="роспись" HorizontalAlignment="Left" Margin="399,592,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="12" Height="30"/>
+            <Label Content="/      М.П." HorizontalAlignment="Left" Margin="464,576,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="16"/>
+            <DataGrid  x:Name="PDFkabinets"  Margin="0,162,-20,142" AutoGenerateColumns="False" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" BorderBrush="White" HorizontalGridLinesBrush="{x:Null}" HeadersVisibility="All">
+
+
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Header="Кабинет" Width="100" Binding="{Binding Kabinet}"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="Инвентаризационный Номер" Width="*" Binding="{Binding InventNomer}"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="Наименование" Width="*" Binding="{Binding Name}" />
+
+
+
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+
+        </Grid>
+
+    </Grid>
+</Window>

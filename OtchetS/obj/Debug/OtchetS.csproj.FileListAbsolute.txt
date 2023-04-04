@@ -33,3 +33,5 @@ C:\Users\dimazzz\Desktop\praktika\OtchetS\OtchetS\bin\Debug\Microsoft.Xaml.Behav
 C:\Users\dimazzz\Desktop\praktika\OtchetS\OtchetS\bin\Debug\SimpleWPFReporting.xml
 C:\Users\dimazzz\Desktop\praktika\OtchetS\OtchetS\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 C:\Users\dimazzz\Desktop\praktika\OtchetS\OtchetS\obj\Debug\document.baml
+C:\Users\dimazzz\Desktop\praktika\OtchetS\OtchetS\obj\Debug\documentTwo.g.cs
+C:\Users\dimazzz\Desktop\praktika\OtchetS\OtchetS\obj\Debug\documentTwo.baml
