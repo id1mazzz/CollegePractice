@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище УчетКомпьютеровModelContainer" CdmEntityContainer="Entitiess">
+    <EntitySetMapping Name="Computers">
+      <EntityTypeMapping TypeName="УчетКомпьютеровModel.Computers">
+        <MappingFragment StoreEntitySet="Computers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InventNomer" ColumnName="InventNomer" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Kabinet" ColumnName="Kabinet" />
+          <ScalarProperty Name="Monitor" ColumnName="Monitor" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="CPU" ColumnName="CPU" />
+          <ScalarProperty Name="Motherboard" ColumnName="Motherboard" />
+          <ScalarProperty Name="MemoryStorage" ColumnName="MemoryStorage" />
+          <ScalarProperty Name="VideoCard" ColumnName="VideoCard" />
+          <ScalarProperty Name="AtWork" ColumnName="AtWork" />
+          <ScalarProperty Name="infoRam" ColumnName="infoRam" />
+          <ScalarProperty Name="infoCPU" ColumnName="infoCPU" />
+          <ScalarProperty Name="infoMBoard" ColumnName="infoMBoard" />
+          <ScalarProperty Name="infoMemory" ColumnName="infoMemory" />
+          <ScalarProperty Name="infoVCard" ColumnName="infoVCard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kabinets">
+      <EntityTypeMapping TypeName="УчетКомпьютеровModel.Kabinets">
+        <MappingFragment StoreEntitySet="Kabinets">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Number_cabinet" ColumnName="Number_cabinet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monitors">
+      <EntityTypeMapping TypeName="УчетКомпьютеровModel.Monitors">
+        <MappingFragment StoreEntitySet="Monitors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NameMonitor" ColumnName="NameMonitor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Otchets">
+      <EntityTypeMapping TypeName="УчетКомпьютеровModel.Otchets">
+        <MappingFragment StoreEntitySet="Otchets">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="УчетКомпьютеровModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameRole" ColumnName="NameRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="УчетКомпьютеровModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="УчетКомпьютеровModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
